@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SirkulAset — Integrated Circular Economy Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-box">
+        <div class="brand-logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.1"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5" />
+            <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12" />
+            <path d="m14 16-3 3 3 3" />
+            <path d="M8.293 13.596 7.196 9.5 3.1 10.598" />
+            <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843" />
+            <path d="m13.378 9.633 4.096 1.098 1.097-4.096" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">SirkulAset AI</h1>
+          <p class="brand-subtitle">Circular Economy Control Tower</p>
+        </div>
+      </div>
+
+      <div class="nav-section-label">Menu Utama</div>
+      <nav class="nav-list" aria-label="Navigasi Dasbor">
+        <button class="nav-btn active" data-view="overview">
+          <span class="nav-btn-left">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="9" rx="1" />
+              <rect x="14" y="3" width="7" height="5" rx="1" />
+              <rect x="14" y="12" width="7" height="9" rx="1" />
+              <rect x="3" y="16" width="7" height="5" rx="1" />
+            </svg>
+            Ringkasan Eksekutif
+          </span>
+          <span class="nav-pill" id="nav-total-pill">100</span>
+        </button>
+
+        <button class="nav-btn" data-view="pathways">
+          <span class="nav-btn-left">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 3h5v5" />
+              <path d="M8 3H3v5" />
+              <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" />
+              <path d="m15 9 6-6" />
+            </svg>
+            Pemantauan 4 Jalur
+          </span>
+        </button>
+
+        <button class="nav-btn" data-view="ai-triage">
+          <span class="nav-btn-left">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+              <circle cx="12" cy="13" r="3" />
+            </svg>
+            Pra-Skrining AI & HITL
+          </span>
+          <span class="nav-pill warn" id="nav-hitl-pill">4</span>
+        </button>
+
+        <button class="nav-btn" data-view="custody">
+          <span class="nav-btn-left">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <path d="m9 15 2 2 4-4" />
+            </svg>
+            Rantai Pengawasan & Mitra
+          </span>
+        </button>
+
+        <button class="nav-btn" data-view="sustainability">
+          <span class="nav-btn-left">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+            Dampak Circular Economy
+          </span>
+        </button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+
+      <div class="role-switcher-box">
+        <label for="role-select">Simulasi Peran Pengguna (RBAC)</label>
+        <select id="role-select" class="role-select">
+          <option value="manager">Pengelola Institusi (Manajer)</option>
+          <option value="operator">Operator Gudang / Triage</option>
+          <option value="technician">Teknisi IT & Sanitasi Data</option>
+          <option value="k3">Petugas K3 & Kepatuhan B3</option>
+        </select>
+        <p class="role-hint" id="role-hint-text"></p>
+      </div>
+
+      <div class="sidebar-footer-note">
+        Studi Kasus #25 • Green Computing &amp; Sustainable AI<br />
+        Data &amp; metrik terkalibrasi dengan Laporan Bab 10.
+      </div>
+    </aside>
+
+    <!-- Main Area -->
+    <div class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka Menu"><svg class="icon" width="16"
+              height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg> Menu</button>
+          <div>
+            <h2 class="page-title" id="topbar-title">Ringkasan Eksekutif Ekonomi Sirkular</h2>
+            <p class="page-subtitle" id="topbar-subtitle">Institusi Pendidikan &amp; Riset Nusantara • Semester Genap
+              2026</p>
+          </div>
+        </div>
+
+        <div class="topbar-alerts">
+          <span class="status-chip role" id="topbar-role-badge">Peran: Pengelola Institusi</span>
+          <button class="status-chip hitl" id="chip-hitl-jump" title="Buka antrean Human-in-the-Loop">
+            <span><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg></span> <span id="chip-hitl-count">4</span> Menunggu HITL
+          </button>
+          <button class="status-chip hazmat" id="chip-hazmat-jump" title="Lihat aset Karantina K3 / Baterai">
+            <span><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg></span> <span id="chip-hazmat-count">6</span> Karantina Baterai/B3
+          </button>
+        </div>
+      </header>
+
+      <div class="global-safety-strip">
+        <div>
+          <strong>Tata Kelola AI &amp; K3 Aktif:</strong> Computer Vision hanya memberikan identifikasi visual awal
+          (bukan sertifikasi keamanan/kondisi internal). Prediksi berkeyakinan &lt; 85% wajib ditinjau operator.
+        </div>
+        <div>
+          <strong>Protokol Baterai:</strong> Baterai menggembung/bocor/panas <u>dilarang dibongkar mandiri</u>.
+        </div>
+      </div>
+
+      <main class="content-wrap">
+        <!-- VIEW 1: OVERVIEW -->
+        <section id="view-overview" class="view-section active">
+          <div class="kpi-grid" id="overview-kpi-grid"></div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Distribusi Jalur Ekonomi Sirkular</h3>
+                  <p class="card-desc">Proporsi unit terpantau pada Reuse, Repair, Donate, Recycle, dan Karantina K3</p>
+                </div>
+                <span class="badge badge-reuse" id="overview-circularity-badge">91,9% Bobot Sirkular</span>
+              </div>
+              <div class="donut-layout" id="overview-donut-container"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Tren Penanganan Aset &amp; E-Waste (6 Bulan)</h3>
+                  <p class="card-desc">Volume unit per bulan berdasarkan jalur keputusan terverifikasi</p>
+                </div>
+              </div>
+              <div id="overview-trend-chart"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Registri Aset &amp; Status Siklus Hidup Terkini</h3>
+                <p class="card-desc">Klik baris atau tombol "Paspor Digital" untuk melihat riwayat AI, sertifikat data
+                  wipe, dan kontrol jalur.</p>
+              </div>
+              <div class="filter-bar">
+                <input type="search" id="overview-search" class="input" placeholder="Cari ID, model, unit pemilik..." />
+                <select id="overview-pathway-filter" class="select">
+                  <option value="all">Semua Jalur</option>
+                  <option value="reuse">Reuse (Pakai Ulang)</option>
+                  <option value="repair">Repair (Perbaikan)</option>
+                  <option value="donate">Donate (Donasi)</option>
+                  <option value="recycle">Recycle (Daur Ulang)</option>
+                  <option value="hazmat">Karantina K3 / Baterai</option>
+                </select>
+                <select id="overview-hitl-filter" class="select">
+                  <option value="all">Semua Status Verifikasi</option>
+                  <option value="pending">Hanya Menunggu HITL</option>
+                  <option value="verified">Sudah Terverifikasi</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID Aset</th>
+                    <th>Perangkat &amp; Kategori</th>
+                    <th>Unit Pemilik</th>
+                    <th>Bobot</th>
+                    <th>Jalur Saat Ini</th>
+                    <th>Keyakinan AI</th>
+                    <th>Status &amp; Kepatuhan</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="overview-table-body"></tbody>
+              </table>
+            </div>
+            <div class="pagination-bar" id="overview-pagination"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 2: PATHWAY BOARD -->
+        <section id="view-pathways" class="view-section">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Pemantauan Terpadu 4 Jalur Sirkular &amp; Karantina K3</h3>
+                <p class="card-desc">Pantau perangkat yang digunakan kembali, diperbaiki, didonasikan, diserahkan ke
+                  pengolah daur ulang, serta isolasi bahaya baterai.</p>
+              </div>
+            </div>
+
+            <div class="pathway-tabs" id="pathway-tabs"></div>
+            <div id="pathway-description-banner" class="disclaimer-box" style="margin-bottom: 16px;"></div>
+            <div class="pathway-cards-grid" id="pathway-cards-grid"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 3: AI VISUAL TRIAGE & HITL -->
+        <section id="view-ai-triage" class="view-section">
+          <div class="disclaimer-box">
+            <strong>Penafian Wajib (Batas Tanggung Jawab Computer Vision):</strong> Modul AI hanya melakukan
+            <em>pra-skrining visual awal</em> berdasarkan citra permukaan perangkat. Hasil CV <strong>bukan sertifikasi
+              keamanan kelistrikan, kesehatan sel baterai internal, maupun kepastian fungsi motherboard</strong>.
+            Prediksi dengan keyakinan di bawah <strong>85%</strong> atau terindikasi risiko baterai wajib ditinjau
+            operator/petugas K3.
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Pra-Skrining Visual AI (MobileNetV3-Large + Grad-CAM + Responsible AI)</h3>
+                <p class="card-desc">Pilih skenario uji atau unggah foto perangkat untuk menjalankan klasifikasi e-waste
+                  nyata, Confidence Gate, &amp; Protokol K3.</p>
+              </div>
+              <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px;">
+                <span class="badge badge-neutral" id="cv-backend-badge">Memeriksa Model CV...</span>
+                <label class="btn btn-primary btn-sm" for="custom-photo-upload" style="cursor:pointer;">
+                  <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                    <circle cx="12" cy="13" r="3" />
+                  </svg> Unggah Foto (Deteksi CV)
+                </label>
+                <input type="file" id="custom-photo-upload" accept="image/*" style="display:none;" />
+              </div>
+            </div>
+
+            <div class="scenario-btn-group" id="ai-scenario-buttons"></div>
+
+            <div class="grid-2-eq">
+              <div>
+                <div class="vision-canvas-box" id="vision-preview-box"></div>
+                <div style="margin-top:10px; font-size:0.78rem; color:var(--text-muted);" id="vision-caption"></div>
+              </div>
+
+              <div id="ai-analysis-panel"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Antrean Tinjauan Operator — Human-in-the-Loop (HITL)</h3>
+                <p class="card-desc">Daftar aset dengan skor keyakinan AI &lt; 0,85 yang terkunci dari eksekusi otomatis
+                  hingga diverifikasi operator.</p>
+              </div>
+              <span class="badge badge-hitl" id="hitl-queue-badge">4 Item Menunggu</span>
+            </div>
+
+            <div id="hitl-queue-container"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 4: CHAIN OF CUSTODY -->
+        <section id="view-custody" class="view-section">
+          <div class="grid-2-eq">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Mitra Penerima Donasi Terverifikasi</h3>
+                  <p class="card-desc">Seluruh perangkat hibah wajib memiliki sertifikat data wiping NIST SP 800-88
+                    &amp; BAST.</p>
+                </div>
+                <span class="badge badge-donate">18 Unit Teralokasi</span>
+              </div>
+              <div id="donation-partners-list"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Direktori Pengolah Daur Ulang &amp; B3</h3>
+                  <p class="card-desc">Pengolah dengan izin kedaluwarsa otomatis diblokir sistem saat pembuatan
+                    manifest.</p>
+                </div>
+              </div>
+              <div id="recyclers-list"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Manifest Pengangkutan &amp; Penyerahan E-Waste</h3>
+                <p class="card-desc">Pelacakan kepatuhan pengumpulan, penyimpanan, pengangkutan, hingga penerbitan
+                  Certificate of Recycling.</p>
+              </div>
+              <button class="btn btn-primary btn-sm" id="open-manifest-modal-btn">+ Buat Manifest Batch Baru</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>No. Manifest</th>
+                    <th>Pengolah Tujuan</th>
+                    <th>Petugas K3</th>
+                    <th>Tanggal Angkut</th>
+                    <th>Jumlah / Bobot</th>
+                    <th>Jenis Muatan</th>
+                    <th>Status &amp; Sertifikat</th>
+                  </tr>
+                </thead>
+                <tbody id="manifests-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: SUSTAINABILITY & CIRCULAR ECONOMY -->
+        <section id="view-sustainability" class="view-section">
+          <div class="kpi-grid" id="sust-kpi-grid"></div>
+
+          <div class="grid-2-eq">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Kontribusi Dampak per Jalur Sirkular</h3>
+                  <p class="card-desc">Perbandingan emisi karbon dihindari (kg CO2e) &amp; nilai ekonomi terselamatkan
+                    (Rp)</p>
+                </div>
+              </div>
+              <div id="sust-breakdown-table"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Simulator Skenario Kebijakan Circular Economy</h3>
+                  <p class="card-desc">Uji pengaruh peningkatan porsi Reuse/Repair terhadap pengurangan emisi &amp;
+                    anggaran CapEx (100 unit/semester).</p>
+                </div>
+              </div>
+              <div id="sust-simulator-box"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal: Digital Product Passport -->
+  <div class="modal-backdrop" id="asset-modal" role="dialog" aria-modal="true" aria-labelledby="modal-asset-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-asset-title" style="margin:0; font-size:1.05rem;">Paspor Produk Digital</h3>
+          <p id="modal-asset-sub" style="margin:2px 0 0; font-size:0.78rem; color:var(--text-muted);"></p>
+        </div>
+        <button class="btn btn-sm" id="close-asset-modal"><svg class="icon" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg> Tutup</button>
+      </div>
+      <div class="modal-body" id="modal-asset-body"></div>
+    </div>
+  </div>
+
+  <!-- Modal: Create E-Waste Manifest -->
+  <div class="modal-backdrop" id="manifest-modal" role="dialog" aria-modal="true"
+    aria-labelledby="manifest-modal-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <h3 id="manifest-modal-title" style="margin:0; font-size:1.05rem;">Buat Manifest Penyerahan E-Waste / B3</h3>
+          <p style="margin:2px 0 0; font-size:0.78rem; color:var(--text-muted);">Hanya pengolah berizin aktif yang dapat
+            dipilih untuk menjamin kepatuhan regulasi.</p>
+        </div>
+        <button class="btn btn-sm" id="close-manifest-modal"><svg class="icon" width="14" height="14"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg> Tutup</button>
+      </div>
+      <div class="modal-body" id="manifest-modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast-box" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.21.0/dist/ort.min.js"></script>
+  <script src="data.js"></script>
+  <script src="cv_edge.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

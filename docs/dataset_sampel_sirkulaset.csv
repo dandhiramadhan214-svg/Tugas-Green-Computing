@@ -1,0 +1,101 @@
+﻿asset_id,qr_tag,serial_number,kategori,merek_model,unit_pemilik,tahun_perolehan,usia_tahun,berat_kg,ai_confidence,battery_hazard_score,hazard_locked,hitl_status,jalur_keputusan,status_siklus,data_wipe_status,co2e_saved_kg,economic_value_idr,repair_cost_idr
+AST-2026-001,QR-AST-2026-001,SN-LAP-10437,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2020,6,3,0.87,0.04,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,102,3700000,0
+AST-2026-002,QR-AST-2026-002,SN-LAP-10454,Laptop,Dell Latitude 5420,Biro Keuangan & SDM,2021,5,5,0.9,0.07,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,153,5500000,0
+AST-2026-003,QR-AST-2026-003,SN-MON-10471,Monitor,HP E24 G4,Perpustakaan Pusat,2022,4,6,0.93,0.1,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,204,7300000,0
+AST-2026-004,QR-AST-2026-004,SN-DES-10488,Desktop,Dell OptiPlex 7090,Gedung Rektorat,2023,3,7,0.96,0.13,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,255,9100000,0
+AST-2026-005,QR-AST-2026-005,SN-LAP-10505,Laptop,Lenovo ThinkPad T14,Poliklinik & Lab Riset,2019,7,3,0.67,0.16,FALSE,pending,reuse,Menunggu Verifikasi Operator (HITL),Terverifikasi NIST SP 800-88,102,3700000,0
+AST-2026-006,QR-AST-2026-006,SN-MON-10522,Monitor,HP E24 G4,Fakultas Teknik,2020,6,5,0.91,0.04,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,153,5500000,0
+AST-2026-007,QR-AST-2026-007,SN-LAP-10539,Laptop,HP ProBook 440 G8,Lab Komputer Pusat,2021,5,6,0.94,0.07,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,204,7200000,0
+AST-2026-008,QR-AST-2026-008,SN-LAP-10556,Laptop,ASUS ExpertBook B1,Biro Keuangan & SDM,2022,4,7,0.97,0.1,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,255,9000000,0
+AST-2026-009,QR-AST-2026-009,SN-MON-10573,Monitor,HP E24 G4,Perpustakaan Pusat,2023,3,3,0.89,0.13,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,102,3600000,0
+AST-2026-010,QR-AST-2026-010,SN-DES-10590,Desktop,Dell OptiPlex 7090,Gedung Rektorat,2019,7,5,0.92,0.16,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,153,5400000,0
+AST-2026-011,QR-AST-2026-011,SN-LAP-10607,Laptop,HP ProBook 440 G8,Poliklinik & Lab Riset,2020,6,6,0.95,0.04,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,204,7200000,0
+AST-2026-012,QR-AST-2026-012,SN-MON-10624,Monitor,HP E24 G4,Fakultas Teknik,2021,5,7,0.87,0.07,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,255,9000000,0
+AST-2026-013,QR-AST-2026-013,SN-LAP-10641,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2022,4,3,0.9,0.1,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,102,3600000,0
+AST-2026-014,QR-AST-2026-014,SN-LAP-10658,Laptop,Dell Latitude 5420,Biro Keuangan & SDM,2023,3,5,0.93,0.13,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,153,5400000,0
+AST-2026-015,QR-AST-2026-015,SN-MON-10675,Monitor,HP E24 G4,Perpustakaan Pusat,2019,7,6,0.96,0.16,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,204,7200000,0
+AST-2026-016,QR-AST-2026-016,SN-DES-10692,Desktop,Dell OptiPlex 7090,Gedung Rektorat,2020,6,7,0.88,0.04,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,255,9000000,0
+AST-2026-017,QR-AST-2026-017,SN-LAP-10709,Laptop,Lenovo ThinkPad T14,Poliklinik & Lab Riset,2021,5,3,0.91,0.07,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,102,3600000,0
+AST-2026-018,QR-AST-2026-018,SN-MON-10726,Monitor,HP E24 G4,Fakultas Teknik,2022,4,4,0.94,0.1,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,153,5400000,0
+AST-2026-019,QR-AST-2026-019,SN-LAP-10743,Laptop,HP ProBook 440 G8,Lab Komputer Pusat,2023,3,5,0.97,0.13,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,204,7200000,0
+AST-2026-020,QR-AST-2026-020,SN-LAP-10760,Laptop,ASUS ExpertBook B1,Biro Keuangan & SDM,2019,7,6,0.89,0.16,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,255,9000000,0
+AST-2026-021,QR-AST-2026-021,SN-MON-10777,Monitor,HP E24 G4,Perpustakaan Pusat,2020,6,2,0.92,0.04,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,102,3600000,0
+AST-2026-022,QR-AST-2026-022,SN-DES-10794,Desktop,Dell OptiPlex 7090,Gedung Rektorat,2021,5,4,0.95,0.07,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,153,5400000,0
+AST-2026-023,QR-AST-2026-023,SN-LAP-10811,Laptop,HP ProBook 440 G8,Poliklinik & Lab Riset,2022,4,5,0.87,0.1,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,204,7200000,0
+AST-2026-024,QR-AST-2026-024,SN-MON-10828,Monitor,HP E24 G4,Fakultas Teknik,2023,3,6,0.9,0.13,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,255,9000000,0
+AST-2026-025,QR-AST-2026-025,SN-LAP-10845,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2019,7,2,0.93,0.16,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,102,3600000,0
+AST-2026-026,QR-AST-2026-026,SN-LAP-10862,Laptop,Dell Latitude 5420,Biro Keuangan & SDM,2020,6,4,0.96,0.04,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,153,5400000,0
+AST-2026-027,QR-AST-2026-027,SN-MON-10879,Monitor,HP E24 G4,Perpustakaan Pusat,2021,5,5,0.88,0.07,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,204,7200000,0
+AST-2026-028,QR-AST-2026-028,SN-DES-10896,Desktop,Dell OptiPlex 7090,Gedung Rektorat,2022,4,6,0.91,0.1,FALSE,verified,reuse,Aktif Dialokasi Ulang,Terverifikasi NIST SP 800-88,254,9000000,0
+AST-2026-029,QR-AST-2026-029,SN-LAP-10913,Laptop,Lenovo ThinkPad T14,Poliklinik & Lab Riset,2023,3,2,0.94,0.13,FALSE,verified,reuse,Siap Penyerahan Unit Internal,Terverifikasi NIST SP 800-88,101,3600000,0
+AST-2026-030,QR-AST-2026-030,SN-MON-10930,Monitor,HP E24 G4,Fakultas Teknik,2019,7,4,0.97,0.16,FALSE,verified,reuse,Uji Fungsi Lulus & Data Wiped,Terverifikasi NIST SP 800-88,152,5400000,0
+AST-2026-031,QR-AST-2026-031,SN-LAP-10947,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2020,6,4,0.87,0.04,FALSE,verified,repair,Dalam Perbaikan Teknisi,Menunggu Uji Teknisi,87,2300000,650000
+AST-2026-032,QR-AST-2026-032,SN-DES-10964,Desktop,HP EliteDesk 800 G6,Biro Keuangan & SDM,2021,5,5,0.9,0.07,FALSE,verified,repair,Menunggu Suku Cadang Aman,Menunggu Uji Teknisi,130,3400000,850000
+AST-2026-033,QR-AST-2026-033,SN-PRO-10981,Proyektor,Epson EB-X500,Perpustakaan Pusat,2022,4,7,0.73,0.1,FALSE,pending,repair,Menunggu Verifikasi Operator (HITL),Terverifikasi NIST SP 800-88,173,4600000,1050000
+AST-2026-034,QR-AST-2026-034,SN-MON-10998,Monitor,"Dell P2419H 24""",Gedung Rektorat,2023,3,8,0.96,0.13,FALSE,verified,repair,Dalam Perbaikan Teknisi,Terverifikasi NIST SP 800-88,216,5700000,1250000
+AST-2026-035,QR-AST-2026-035,SN-PRI-11015,Printer,HP LaserJet Pro M404dn,Poliklinik & Lab Riset,2019,7,4,0.88,0.16,FALSE,verified,repair,Menunggu Suku Cadang Aman,Terverifikasi NIST SP 800-88,87,2300000,650000
+AST-2026-036,QR-AST-2026-036,SN-LAP-11032,Laptop,Dell Latitude 5420,Fakultas Teknik,2020,6,5,0.91,0.04,FALSE,verified,repair,Uji Fungsi Pasca Servis,Menunggu Uji Teknisi,130,3400000,850000
+AST-2026-037,QR-AST-2026-037,SN-LAP-11049,Laptop,HP ProBook 440 G8,Lab Komputer Pusat,2021,5,7,0.94,0.07,FALSE,verified,repair,Dalam Perbaikan Teknisi,Menunggu Uji Teknisi,173,4600000,1050000
+AST-2026-038,QR-AST-2026-038,SN-DES-11066,Desktop,HP EliteDesk 800 G6,Biro Keuangan & SDM,2022,4,8,0.97,0.1,FALSE,verified,repair,Menunggu Suku Cadang Aman,Menunggu Uji Teknisi,216,5700000,1250000
+AST-2026-039,QR-AST-2026-039,SN-PRO-11083,Proyektor,Epson EB-X500,Perpustakaan Pusat,2023,3,3,0.89,0.13,FALSE,verified,repair,Uji Fungsi Pasca Servis,Terverifikasi NIST SP 800-88,86,2300000,650000
+AST-2026-040,QR-AST-2026-040,SN-MON-11100,Monitor,"Dell P2419H 24""",Gedung Rektorat,2019,7,4,0.92,0.16,FALSE,verified,repair,Dalam Perbaikan Teknisi,Terverifikasi NIST SP 800-88,129,3300000,850000
+AST-2026-041,QR-AST-2026-041,SN-PRI-11117,Printer,HP LaserJet Pro M404dn,Poliklinik & Lab Riset,2020,6,6,0.95,0.04,FALSE,verified,repair,Menunggu Suku Cadang Aman,Terverifikasi NIST SP 800-88,172,4500000,1050000
+AST-2026-042,QR-AST-2026-042,SN-LAP-11134,Laptop,ASUS ExpertBook B1,Fakultas Teknik,2021,5,7,0.73,0.07,FALSE,pending,repair,Menunggu Verifikasi Operator (HITL),Menunggu Uji Teknisi,215,5600000,1250000
+AST-2026-043,QR-AST-2026-043,SN-LAP-11151,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2022,4,3,0.9,0.1,FALSE,verified,repair,Dalam Perbaikan Teknisi,Menunggu Uji Teknisi,86,2200000,650000
+AST-2026-044,QR-AST-2026-044,SN-DES-11168,Desktop,HP EliteDesk 800 G6,Biro Keuangan & SDM,2023,3,4,0.93,0.13,FALSE,verified,repair,Menunggu Suku Cadang Aman,Menunggu Uji Teknisi,129,3300000,850000
+AST-2026-045,QR-AST-2026-045,SN-PRO-11185,Proyektor,Epson EB-X500,Perpustakaan Pusat,2019,7,6,0.96,0.16,FALSE,verified,repair,Uji Fungsi Pasca Servis,Terverifikasi NIST SP 800-88,172,4500000,1050000
+AST-2026-046,QR-AST-2026-046,SN-MON-11202,Monitor,"Dell P2419H 24""",Gedung Rektorat,2020,6,7,0.88,0.04,FALSE,verified,repair,Dalam Perbaikan Teknisi,Terverifikasi NIST SP 800-88,215,5600000,1250000
+AST-2026-047,QR-AST-2026-047,SN-PRI-11219,Printer,HP LaserJet Pro M404dn,Poliklinik & Lab Riset,2021,5,3,0.91,0.07,FALSE,verified,repair,Menunggu Suku Cadang Aman,Terverifikasi NIST SP 800-88,86,2200000,650000
+AST-2026-048,QR-AST-2026-048,SN-LAP-11236,Laptop,Dell Latitude 5420,Fakultas Teknik,2022,4,4,0.94,0.1,FALSE,verified,repair,Uji Fungsi Pasca Servis,Menunggu Uji Teknisi,129,3300000,850000
+AST-2026-049,QR-AST-2026-049,SN-LAP-11253,Laptop,HP ProBook 440 G8,Lab Komputer Pusat,2023,3,6,0.97,0.13,FALSE,verified,repair,Dalam Perbaikan Teknisi,Menunggu Uji Teknisi,172,4500000,1050000
+AST-2026-050,QR-AST-2026-050,SN-DES-11270,Desktop,HP EliteDesk 800 G6,Biro Keuangan & SDM,2019,7,7,0.89,0.16,FALSE,verified,repair,Menunggu Suku Cadang Aman,Menunggu Uji Teknisi,215,5600000,1250000
+AST-2026-051,QR-AST-2026-051,SN-PRO-11287,Proyektor,Epson EB-X500,Perpustakaan Pusat,2020,6,3,0.92,0.04,FALSE,verified,repair,Uji Fungsi Pasca Servis,Terverifikasi NIST SP 800-88,86,2200000,650000
+AST-2026-052,QR-AST-2026-052,SN-MON-11304,Monitor,"Dell P2419H 24""",Gedung Rektorat,2021,5,4,0.95,0.07,FALSE,verified,repair,Dalam Perbaikan Teknisi,Terverifikasi NIST SP 800-88,129,3300000,850000
+AST-2026-053,QR-AST-2026-053,SN-PRI-11321,Printer,HP LaserJet Pro M404dn,Poliklinik & Lab Riset,2022,4,6,0.87,0.1,FALSE,verified,repair,Menunggu Suku Cadang Aman,Terverifikasi NIST SP 800-88,172,4500000,1050000
+AST-2026-054,QR-AST-2026-054,SN-LAP-11338,Laptop,ASUS ExpertBook B1,Fakultas Teknik,2023,3,7,0.9,0.13,FALSE,verified,repair,Uji Fungsi Pasca Servis,Menunggu Uji Teknisi,215,5600000,1250000
+AST-2026-055,QR-AST-2026-055,SN-LAP-11355,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2019,7,3,0.87,0.04,FALSE,verified,donate,BAST Hibah Selesai,Terverifikasi NIST SP 800-88,98,2100000,0
+AST-2026-056,QR-AST-2026-056,SN-MON-11372,Monitor,"LG UltraFine 24""",Biro Keuangan & SDM,2020,6,5,0.9,0.07,FALSE,verified,donate,Data Wiped — Siap Kirim Mitra,Terverifikasi NIST SP 800-88,147,3100000,0
+AST-2026-057,QR-AST-2026-057,SN-DES-11389,Desktop,Lenovo ThinkCentre M70q,Perpustakaan Pusat,2021,5,6,0.93,0.1,FALSE,verified,donate,Alokasi SMKN 2 / SMP Harapan,Terverifikasi NIST SP 800-88,196,4200000,0
+AST-2026-058,QR-AST-2026-058,SN-LAP-11406,Laptop,ASUS ExpertBook B1,Gedung Rektorat,2022,4,8,0.96,0.13,FALSE,verified,donate,BAST Hibah Selesai,Terverifikasi NIST SP 800-88,245,5200000,0
+AST-2026-059,QR-AST-2026-059,SN-LAP-11423,Laptop,Lenovo ThinkPad T14,Poliklinik & Lab Riset,2023,3,3,0.88,0.16,FALSE,verified,donate,Data Wiped — Siap Kirim Mitra,Terverifikasi NIST SP 800-88,98,2100000,0
+AST-2026-060,QR-AST-2026-060,SN-MON-11440,Monitor,HP E24 G4,Fakultas Teknik,2019,7,5,0.91,0.04,FALSE,verified,donate,Alokasi SMKN 2 / SMP Harapan,Terverifikasi NIST SP 800-88,147,3100000,0
+AST-2026-061,QR-AST-2026-061,SN-DES-11457,Desktop,Dell OptiPlex 7090,Lab Komputer Pusat,2020,6,6,0.94,0.07,FALSE,verified,donate,BAST Hibah Selesai,Terverifikasi NIST SP 800-88,196,4200000,0
+AST-2026-062,QR-AST-2026-062,SN-LAP-11474,Laptop,ASUS ExpertBook B1,Biro Keuangan & SDM,2021,5,8,0.97,0.1,FALSE,verified,donate,Data Wiped — Siap Kirim Mitra,Terverifikasi NIST SP 800-88,245,5200000,0
+AST-2026-063,QR-AST-2026-063,SN-LAP-11491,Laptop,Lenovo ThinkPad T14,Perpustakaan Pusat,2022,4,2,0.89,0.13,FALSE,verified,donate,Alokasi SMKN 2 / SMP Harapan,Terverifikasi NIST SP 800-88,98,2100000,0
+AST-2026-064,QR-AST-2026-064,SN-MON-11508,Monitor,"Dell P2419H 24""",Gedung Rektorat,2023,3,4,0.92,0.16,FALSE,verified,donate,BAST Hibah Selesai,Terverifikasi NIST SP 800-88,146,3100000,0
+AST-2026-065,QR-AST-2026-065,SN-DES-11525,Desktop,HP EliteDesk 800 G6,Poliklinik & Lab Riset,2019,7,5,0.95,0.04,FALSE,verified,donate,Data Wiped — Siap Kirim Mitra,Terverifikasi NIST SP 800-88,195,4200000,0
+AST-2026-066,QR-AST-2026-066,SN-LAP-11542,Laptop,ASUS ExpertBook B1,Fakultas Teknik,2020,6,7,0.87,0.07,FALSE,verified,donate,Alokasi SMKN 2 / SMP Harapan,Terverifikasi NIST SP 800-88,244,5200000,0
+AST-2026-067,QR-AST-2026-067,SN-LAP-11559,Laptop,Lenovo ThinkPad T14,Lab Komputer Pusat,2021,5,2,0.9,0.1,FALSE,verified,donate,BAST Hibah Selesai,Terverifikasi NIST SP 800-88,97,2000000,0
+AST-2026-068,QR-AST-2026-068,SN-MON-11576,Monitor,"LG UltraFine 24""",Biro Keuangan & SDM,2022,4,4,0.93,0.13,FALSE,verified,donate,Data Wiped — Siap Kirim Mitra,Terverifikasi NIST SP 800-88,146,3000000,0
+AST-2026-069,QR-AST-2026-069,SN-DES-11593,Desktop,Lenovo ThinkCentre M70q,Perpustakaan Pusat,2023,3,5,0.96,0.16,FALSE,verified,donate,Alokasi SMKN 2 / SMP Harapan,Terverifikasi NIST SP 800-88,195,4100000,0
+AST-2026-070,QR-AST-2026-070,SN-LAP-11610,Laptop,ASUS ExpertBook B1,Gedung Rektorat,2019,7,7,0.88,0.04,FALSE,verified,donate,BAST Hibah Selesai,Terverifikasi NIST SP 800-88,244,5100000,0
+AST-2026-071,QR-AST-2026-071,SN-LAP-11627,Laptop,Lenovo ThinkPad T14,Poliklinik & Lab Riset,2020,6,2,0.91,0.07,FALSE,verified,donate,Data Wiped — Siap Kirim Mitra,Terverifikasi NIST SP 800-88,97,2000000,0
+AST-2026-072,QR-AST-2026-072,SN-MON-11644,Monitor,HP E24 G4,Fakultas Teknik,2021,5,4,0.94,0.1,FALSE,verified,donate,Alokasi SMKN 2 / SMP Harapan,Terverifikasi NIST SP 800-88,146,3000000,0
+AST-2026-073,QR-AST-2026-073,SN-PRI-11661,Printer,HP LaserJet Pro M404dn,Lab Komputer Pusat,2022,4,4,0.87,0.04,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,31,400000,0
+AST-2026-074,QR-AST-2026-074,SN-DES-11678,Desktop,HP EliteDesk 800 G6,Biro Keuangan & SDM,2023,3,6,0.9,0.07,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,47,600000,0
+AST-2026-075,QR-AST-2026-075,SN-MON-11695,Monitor,HP E24 G4,Perpustakaan Pusat,2019,7,8,0.93,0.1,FALSE,verified,recycle,Selesai Daur Ulang Material,Terverifikasi NIST SP 800-88,62,800000,0
+AST-2026-076,QR-AST-2026-076,SN-PRO-11712,Proyektor,BenQ MH550,Gedung Rektorat,2020,6,10,0.96,0.13,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,78,1000000,0
+AST-2026-077,QR-AST-2026-077,SN-LAP-11729,Laptop,Lenovo ThinkPad T14,Poliklinik & Lab Riset,2021,5,4,0.88,0.16,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,31,400000,0
+AST-2026-078,QR-AST-2026-078,SN-PRI-11746,Printer,Canon imageCLASS MF244dw,Fakultas Teknik,2022,4,6,0.73,0.04,FALSE,pending,recycle,Menunggu Verifikasi Operator (HITL),Terverifikasi NIST SP 800-88,47,600000,0
+AST-2026-079,QR-AST-2026-079,SN-DES-11763,Desktop,Dell OptiPlex 7090,Lab Komputer Pusat,2023,3,8,0.94,0.07,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,62,800000,0
+AST-2026-080,QR-AST-2026-080,SN-MON-11780,Monitor,"LG UltraFine 24""",Biro Keuangan & SDM,2019,7,10,0.97,0.1,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,78,1000000,0
+AST-2026-081,QR-AST-2026-081,SN-PRO-11797,Proyektor,Epson EB-X500,Perpustakaan Pusat,2020,6,4,0.89,0.13,FALSE,verified,recycle,Selesai Daur Ulang Material,Terverifikasi NIST SP 800-88,31,400000,0
+AST-2026-082,QR-AST-2026-082,SN-LAP-11814,Laptop,Dell Latitude 5420,Gedung Rektorat,2021,5,6,0.92,0.16,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,47,600000,0
+AST-2026-083,QR-AST-2026-083,SN-PRI-11831,Printer,HP LaserJet Pro M404dn,Poliklinik & Lab Riset,2022,4,8,0.95,0.04,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,62,800000,0
+AST-2026-084,QR-AST-2026-084,SN-DES-11848,Desktop,Lenovo ThinkCentre M70q,Fakultas Teknik,2023,3,10,0.87,0.07,FALSE,verified,recycle,Selesai Daur Ulang Material,Terverifikasi NIST SP 800-88,78,1000000,0
+AST-2026-085,QR-AST-2026-085,SN-MON-11865,Monitor,"Dell P2419H 24""",Lab Komputer Pusat,2019,7,4,0.9,0.1,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,31,400000,0
+AST-2026-086,QR-AST-2026-086,SN-PRO-11882,Proyektor,BenQ MH550,Biro Keuangan & SDM,2020,6,6,0.93,0.13,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,47,600000,0
+AST-2026-087,QR-AST-2026-087,SN-LAP-11899,Laptop,HP ProBook 440 G8,Perpustakaan Pusat,2021,5,8,0.96,0.16,FALSE,verified,recycle,Selesai Daur Ulang Material,Terverifikasi NIST SP 800-88,61,700000,0
+AST-2026-088,QR-AST-2026-088,SN-PRI-11916,Printer,Canon imageCLASS MF244dw,Gedung Rektorat,2022,4,10,0.88,0.04,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,77,900000,0
+AST-2026-089,QR-AST-2026-089,SN-DES-11933,Desktop,HP EliteDesk 800 G6,Poliklinik & Lab Riset,2023,3,4,0.91,0.07,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,30,300000,0
+AST-2026-090,QR-AST-2026-090,SN-MON-11950,Monitor,HP E24 G4,Fakultas Teknik,2019,7,5,0.94,0.1,FALSE,verified,recycle,Selesai Daur Ulang Material,Terverifikasi NIST SP 800-88,46,500000,0
+AST-2026-091,QR-AST-2026-091,SN-PRO-11967,Proyektor,Epson EB-X500,Lab Komputer Pusat,2020,6,7,0.97,0.13,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,61,700000,0
+AST-2026-092,QR-AST-2026-092,SN-LAP-11984,Laptop,ASUS ExpertBook B1,Biro Keuangan & SDM,2021,5,9,0.89,0.16,FALSE,verified,recycle,Menunggu Penjemputan Berizin,Terverifikasi NIST SP 800-88,77,900000,0
+AST-2026-093,QR-AST-2026-093,SN-PRI-12001,Printer,HP LaserJet Pro M404dn,Perpustakaan Pusat,2022,4,3,0.92,0.04,FALSE,verified,recycle,Selesai Daur Ulang Material,Terverifikasi NIST SP 800-88,30,300000,0
+AST-2026-094,QR-AST-2026-094,SN-DES-12018,Desktop,Dell OptiPlex 7090,Gedung Rektorat,2023,3,5,0.95,0.07,FALSE,verified,recycle,Tercatat di Manifest Pengolah,Terverifikasi NIST SP 800-88,46,500000,0
+AST-2026-095,QR-AST-2026-095,SN-UPS-12035,UPS,APC Smart-UPS 1500VA,Poliklinik & Lab Riset,2019,7,5,0.87,0.78,TRUE,verified,hazmat,Karantina Drum Isolasi K3,Dilarang Dioperasikan (Hazmat),23,0,0
+AST-2026-096,QR-AST-2026-096,SN-LAP-12052,Laptop,Dell Latitude 5420,Fakultas Teknik,2020,6,7,0.9,0.84,TRUE,verified,hazmat,Terjadwal Jemput PT Baterai Aman,Dilarang Dioperasikan (Hazmat),33,0,0
+AST-2026-097,QR-AST-2026-097,SN-UPS-12069,UPS,APC Smart-UPS 1500VA,Lab Komputer Pusat,2021,5,10,0.93,0.9,TRUE,verified,hazmat,Karantina Drum Isolasi K3,Dilarang Dioperasikan (Hazmat),44,0,0
+AST-2026-098,QR-AST-2026-098,SN-LAP-12086,Laptop,ASUS ExpertBook B1,Biro Keuangan & SDM,2022,4,12,0.96,0.78,TRUE,verified,hazmat,Terjadwal Jemput PT Baterai Aman,Dilarang Dioperasikan (Hazmat),55,0,0
+AST-2026-099,QR-AST-2026-099,SN-UPS-12103,UPS,APC Smart-UPS 1500VA,Perpustakaan Pusat,2023,3,4,0.88,0.84,TRUE,verified,hazmat,Karantina Drum Isolasi K3,Dilarang Dioperasikan (Hazmat),22,0,0
+AST-2026-100,QR-AST-2026-100,SN-LAP-12120,Laptop,Dell Latitude 5420,Gedung Rektorat,2019,7,6,0.91,0.9,TRUE,verified,hazmat,Terjadwal Jemput PT Baterai Aman,Dilarang Dioperasikan (Hazmat),33,0,0

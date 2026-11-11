@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagram Arsitektur &amp; Ringkasan Presentasi — SirkulAset (Studi Kasus #25)</title>
+  <style>
+    :root {
+      --bg: #f4f7f5;
+      --surface: #ffffff;
+      --border: #d8e2dc;
+      --text: #111c17;
+      --muted: #52635a;
+      --brand: #059669;
+      --dark: #0f3d28;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .header-bar {
+      background: linear-gradient(135deg, #0d3322, #14532d);
+      color: #ffffff;
+      padding: 24px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-bar h1 { margin: 0; font-size: 1.45rem; }
+    .header-bar p { margin: 4px 0 0; color: #a7f3d0; font-size: 0.9rem; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.12);
+      color: #ffffff;
+    }
+    .btn-solid {
+      background: #10b981;
+      border-color: #10b981;
+      color: #052e16;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 26px auto;
+      padding: 0 20px 50px;
+    }
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(15, 61, 40, 0.04);
+      break-inside: avoid;
+    }
+    .section-card h2 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      color: var(--dark);
+      border-bottom: 2px solid #ecfdf5;
+      padding-bottom: 8px;
+    }
+    .section-sub {
+      margin: 0 0 16px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .svg-frame {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fcfefd;
+      padding: 12px;
+      overflow-x: auto;
+    }
+    svg { display: block; width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      text-align: left;
+    }
+    th { background: #f0fdf4; color: #064e3b; }
+    .safety-banner {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 5px solid #dc2626;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      color: #7f1d1d;
+    }
+    @media print {
+      body { background: #ffffff; }
+      .actions { display: none; }
+      .section-card { box-shadow: none; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-bar">
+    <div>
+      <h1>SirkulAset — Paket Diagram Sistem &amp; Ringkasan Tugas (Studi Kasus #25)</h1>
+      <p>Green Computing &amp; Sustainable AI (Pertemuan 10) • Integrated Circular Economy Dashboard</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-solid" href="../prototype/index.html">Buka UI/UX Prototype Interaktif</a>
+      <button class="btn" onclick="window.print()">Cetak / Simpan sebagai PDF</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Pemetaan Rubrik -->
+    <section class="section-card">
+      <h2>Pemetaan 10 Komponen Tugas &amp; Rubrik Penilaian</h2>
+      <p class="section-sub">Ringkasan kelengkapan dokumen pada <code>docs/Laporan_Rancangan_Sistem_SirkulAset.md</code> dan prototipe interaktif pada <code>prototype/index.html</code>.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Komponen Tugas</th>
+            <th>Output yang Dihasilkan</th>
+            <th>Bobot Rubrik Terkait</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Identifikasi Masalah</td><td>Latar belakang fragmentasi aset, risiko baterai, &amp; 4 rumusan masalah institusi</td><td>Analisis Permasalahan (15%)</td></tr>
+          <tr><td>2</td><td>Analisis Kebutuhan</td><td>10 Kebutuhan Fungsional (FR-01–FR-10) &amp; 7 Nonfungsional (NFR-01–NFR-07)</td><td>Inovasi &amp; Relevansi (20%)</td></tr>
+          <tr><td>3</td><td>Identifikasi Pengguna</td><td>6 Aktor manusia + 1 sistem eksternal (SIMAK/ERP) dengan matriks hak akses RBAC</td><td>Analisis Permasalahan (15%)</td></tr>
+          <tr><td>4</td><td>Perancangan Proses Bisnis</td><td>Flowchart end-to-end dengan Dual Gate: Keselamatan Baterai K3 &amp; Confidence Gate HITL</td><td>Perancangan Sistem (20%)</td></tr>
+          <tr><td>5</td><td>Pemodelan Sistem</td><td>Use Case Diagram (UC-01–UC-09) dengan relasi <code>&lt;&lt;include&gt;&gt;</code> &amp; <code>&lt;&lt;extend&gt;&gt;</code></td><td>Perancangan Sistem (20%)</td></tr>
+          <tr><td>6</td><td>Arsitektur Solusi</td><td>Arsitektur 5 lapis (Presentasi, Keamanan, Layanan, AI &amp; Guardrail, Data) berprinsip Green AI</td><td>Perancangan Sistem (20%)</td></tr>
+          <tr><td>7</td><td>Perancangan Data</td><td>ERD lengkap 12 entitas (PK/FK, atribut keselamatan &amp; audit trail)</td><td>Perancangan Sistem (20%)</td></tr>
+          <tr><td>8</td><td>Desain Antarmuka</td><td>UI/UX Prototype web interaktif 5 modul (100 unit data terkalibrasi + simulator AI &amp; ESG)</td><td>Desain Prototype (15%)</td></tr>
+          <tr><td>9</td><td>Integrasi AI</td><td>YOLOv8n INT8 + MobileNetV3 + LightGBM + Temperature Scaling + XAI + Strategi Data</td><td>Penerapan Konsep AI (20%)</td></tr>
+          <tr><td>10</td><td>Analisis Keberlanjutan</td><td>Metrik 9R &amp; simulasi 100 unit/semester: 13.220 kg CO2e dihindari &amp; Rp 357,7 jt</td><td>Circular Economy (10%)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- DIAGRAM 1: FLOWCHART -->
+    <section class="section-card">
+      <h2>Diagram 1 (Komponen 4): Flowchart Proses Bisnis, Protokol Baterai &amp; HITL</h2>
+      <p class="section-sub">Memastikan tidak ada eksekusi otomatis untuk prediksi berkeyakinan rendah (&lt; 0,85) dan mengunci pembongkaran mandiri saat terindikasi bahaya baterai.</p>
+      <div class="svg-frame">
+        <svg viewBox="0 0 960 660" role="img" aria-label="Flowchart Proses Bisnis SirkulAset">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+            </marker>
+            <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
+            </marker>
+          </defs>
+
+          <!-- Start -->
+          <rect x="330" y="14" width="300" height="38" rx="19" fill="#0f3d28"/>
+          <text x="480" y="38" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">Mulai: Perangkat Pasca-Pakai / Nonaktif</text>
+          <line x1="480" y1="52" x2="480" y2="74" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <!-- Scan & Photo -->
+          <rect x="290" y="76" width="380" height="42" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+          <text x="480" y="95" text-anchor="middle" fill="#111c17" font-size="11.5" font-weight="600">Operator Scan QR, Tarik Riwayat ERP &amp; Foto Perangkat</text>
+          <text x="480" y="110" text-anchor="middle" fill="#52635a" font-size="10">Disertai cek awal operator (suhu panas / bau kimia / kebocoran)</text>
+          <line x1="480" y1="118" x2="480" y2="140" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <!-- AI Inference -->
+          <rect x="265" y="142" width="430" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6"/>
+          <text x="480" y="162" text-anchor="middle" fill="#1e3a8a" font-size="11.5" font-weight="700">Modul AI: Pra-Skrining Visual CV &amp; Rekomendasi Rute</text>
+          <text x="480" y="177" text-anchor="middle" fill="#1e40af" font-size="10">Catatan: Identifikasi visual awal — bukan sertifikasi keamanan internal</text>
+          <line x1="480" y1="186" x2="480" y2="210" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <!-- Gate 1: Safety -->
+          <polygon points="480,212 670,240 480,268 290,240" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+          <text x="480" y="237" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="700">Indikasi Baterai Rusak /</text>
+          <text x="480" y="250" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="700">Menggembung / Bocor / Panas?</text>
+
+          <!-- YA Branch (Right) -->
+          <line x1="670" y1="240" x2="726" y2="240" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+          <text x="695" y="232" text-anchor="middle" fill="#dc2626" font-size="10.5" font-weight="700">YA</text>
+
+          <rect x="730" y="218" width="210" height="44" rx="8" fill="#dc2626"/>
+          <text x="835" y="237" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">LOCK: Dilarang Bongkar Mandiri</text>
+          <text x="835" y="252" text-anchor="middle" fill="#fee2e2" font-size="9.5">Nonaktifkan opsi Repair di sistem</text>
+          <line x1="835" y1="262" x2="835" y2="288" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+
+          <rect x="730" y="290" width="210" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+          <text x="835" y="309" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="700">Karantina &amp; Isolasi K3</text>
+          <text x="835" y="324" text-anchor="middle" fill="#7f1d1d" font-size="9.5">Drum tahan api &amp; verifikasi K3</text>
+          <line x1="835" y1="334" x2="835" y2="358" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+
+          <rect x="730" y="360" width="210" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+          <text x="835" y="379" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="700">Serah ke Pengolah B3 Kompeten</text>
+          <text x="835" y="394" text-anchor="middle" fill="#7f1d1d" font-size="9.5">Manifest resmi &amp; sertifikat aman</text>
+
+          <!-- TIDAK Branch (Down to Gate 2) -->
+          <line x1="480" y1="268" x2="480" y2="294" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <text x="498" y="285" fill="#059669" font-size="10.5" font-weight="700">TIDAK</text>
+
+          <polygon points="480,296 635,322 480,348 325,322" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8"/>
+          <text x="480" y="326" text-anchor="middle" fill="#9a3412" font-size="11.5" font-weight="700">Confidence AI ≥ 0,85?</text>
+
+          <!-- Low Confidence (Left HITL) -->
+          <line x1="325" y1="322" x2="262" y2="322" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <text x="294" y="314" text-anchor="middle" fill="#ea580c" font-size="10.5" font-weight="700">TIDAK</text>
+
+          <rect x="24" y="298" width="234" height="46" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+          <text x="141" y="318" text-anchor="middle" fill="#9a3412" font-size="11" font-weight="700">Antrean Tinjauan Operator (HITL)</text>
+          <text x="141" y="333" text-anchor="middle" fill="#7c2d12" font-size="9.5">Cek fisik &amp; log koreksi untuk AI</text>
+          <path d="M 141 344 L 141 448 L 306 448" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <!-- High Confidence (Down) -->
+          <line x1="480" y1="348" x2="480" y2="372" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <text x="495" y="364" fill="#059669" font-size="10.5" font-weight="700">YA</text>
+
+          <rect x="310" y="374" width="340" height="38" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+          <text x="480" y="397" text-anchor="middle" fill="#065f46" font-size="11" font-weight="600">Tampilkan Rekomendasi Jalur + Penafian AI</text>
+          <line x1="480" y1="412" x2="480" y2="428" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <!-- Human Final Confirmation -->
+          <rect x="310" y="430" width="340" height="38" rx="8" fill="#0f3d28"/>
+          <text x="480" y="453" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="700">Konfirmasi Operator / Persetujuan Manajer</text>
+
+          <!-- Distribution Lines to 4 Pathways -->
+          <line x1="480" y1="468" x2="480" y2="486" stroke="#475569" stroke-width="1.8"/>
+          <line x1="125" y1="486" x2="825" y2="486" stroke="#475569" stroke-width="1.8"/>
+          <line x1="125" y1="486" x2="125" y2="504" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <line x1="355" y1="486" x2="355" y2="504" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <line x1="585" y1="486" x2="585" y2="504" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <line x1="825" y1="486" x2="825" y2="504" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <!-- 4 Pathway Boxes -->
+          <rect x="20" y="506" width="210" height="68" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.8"/>
+          <text x="125" y="527" text-anchor="middle" fill="#065f46" font-size="12" font-weight="700">1. REUSE</text>
+          <text x="125" y="544" text-anchor="middle" fill="#047857" font-size="10">Uji internal teknisi + data wipe</text>
+          <text x="125" y="559" text-anchor="middle" fill="#047857" font-size="10">Alokasi ulang ke unit internal</text>
+
+          <rect x="250" y="506" width="210" height="68" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+          <text x="355" y="527" text-anchor="middle" fill="#92400e" font-size="12" font-weight="700">2. REPAIR</text>
+          <text x="355" y="544" text-anchor="middle" fill="#b45309" font-size="10">Diagnostik &amp; servis aman</text>
+          <text x="355" y="559" text-anchor="middle" fill="#b45309" font-size="10">Jika gagal/mahal → Recycle</text>
+
+          <rect x="480" y="506" width="210" height="68" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+          <text x="585" y="527" text-anchor="middle" fill="#1e40af" font-size="12" font-weight="700">3. DONATE</text>
+          <text x="585" y="544" text-anchor="middle" fill="#1d4ed8" font-size="10">Data wipe NIST SP 800-88</text>
+          <text x="585" y="559" text-anchor="middle" fill="#1d4ed8" font-size="10">Persetujuan &amp; BAST mitra</text>
+
+          <rect x="710" y="506" width="230" height="68" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+          <text x="825" y="527" text-anchor="middle" fill="#3730a3" font-size="12" font-weight="700">4. RECYCLE</text>
+          <text x="825" y="544" text-anchor="middle" fill="#4338ca" font-size="10">Verifikasi izin &amp; manifest B3</text>
+          <text x="825" y="559" text-anchor="middle" fill="#4338ca" font-size="10">Sertifikat pengolah berizin</text>
+
+          <!-- Merge to Impact -->
+          <line x1="125" y1="574" x2="125" y2="590" stroke="#475569" stroke-width="1.6"/>
+          <line x1="355" y1="574" x2="355" y2="590" stroke="#475569" stroke-width="1.6"/>
+          <line x1="585" y1="574" x2="585" y2="590" stroke="#475569" stroke-width="1.6"/>
+          <line x1="825" y1="574" x2="825" y2="590" stroke="#475569" stroke-width="1.6"/>
+          <line x1="125" y1="590" x2="825" y2="590" stroke="#475569" stroke-width="1.6"/>
+          <line x1="480" y1="590" x2="480" y2="606" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+          <rect x="200" y="608" width="560" height="40" rx="20" fill="#0f3d28"/>
+          <text x="480" y="632" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="700">Kalkulator Dampak (kg Limbah, CO2e, Penghematan Rp) &amp; Pembaruan Paspor Digital</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- DIAGRAM 2: USE CASE DIAGRAM -->
+    <section class="section-card">
+      <h2>Diagram 2 (Komponen 5): Use Case Diagram Sistem SirkulAset</h2>
+      <p class="section-sub">Menunjukkan seluruh aktor internal, mitra eksternal, sistem ERP, serta relasi kontrol risiko <code>&lt;&lt;extend&gt;&gt;</code> dan <code>&lt;&lt;include&gt;&gt;</code>.</p>
+      <div class="svg-frame">
+        <svg viewBox="0 0 960 560" role="img" aria-label="Use Case Diagram SirkulAset">
+          <defs>
+            <marker id="uc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+            </marker>
+          </defs>
+
+          <!-- System Boundary -->
+          <rect x="220" y="20" width="520" height="520" rx="14" fill="#f8faf9" stroke="#0f3d28" stroke-width="2"/>
+          <text x="480" y="45" text-anchor="middle" fill="#0f3d28" font-size="13.5" font-weight="700">Sistem SirkulAset — Integrated Circular Economy Dashboard</text>
+
+          <!-- Left Actors -->
+          <g fill="#0f3d28" font-size="11.5" font-weight="700">
+            <rect x="18" y="66" width="166" height="42" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+            <text x="101" y="91" text-anchor="middle">Operator Triage/Gudang</text>
+
+            <rect x="18" y="196" width="166" height="42" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+            <text x="101" y="221" text-anchor="middle">Teknisi IT &amp; Data Wipe</text>
+
+            <rect x="18" y="326" width="166" height="42" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+            <text x="101" y="351" text-anchor="middle" fill="#991b1b">Petugas K3 &amp; B3</text>
+
+            <rect x="18" y="446" width="166" height="42" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+            <text x="101" y="471" text-anchor="middle" fill="#1e40af">Pengelola Institusi</text>
+          </g>
+
+          <!-- Right Actors -->
+          <g font-size="11.5" font-weight="700">
+            <rect x="776" y="66" width="166" height="42" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+            <text x="859" y="91" text-anchor="middle" fill="#334155">Sistem SIMAK / ERP</text>
+
+            <rect x="776" y="338" width="166" height="42" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+            <text x="859" y="363" text-anchor="middle" fill="#1e40af">Mitra Penerima Donasi</text>
+
+            <rect x="776" y="446" width="166" height="42" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+            <text x="859" y="471" text-anchor="middle" fill="#3730a3">Pengolah Daur Ulang</text>
+          </g>
+
+          <!-- Use Cases Left Col (cx=365) -->
+          <g>
+            <ellipse cx="360" cy="87" rx="112" ry="23" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+            <text x="360" y="91" text-anchor="middle" font-size="11" font-weight="600" fill="#111c17">UC-01: Registrasi &amp; Paspor Aset</text>
+
+            <ellipse cx="360" cy="156" rx="112" ry="23" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+            <text x="360" y="160" text-anchor="middle" font-size="11" font-weight="600" fill="#111c17">UC-02: Pra-Skrining Visual AI</text>
+
+            <ellipse cx="360" cy="230" rx="112" ry="23" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+            <text x="360" y="234" text-anchor="middle" font-size="11" font-weight="600" fill="#111c17">UC-05: Kelola Jalur Reuse</text>
+
+            <ellipse cx="360" cy="306" rx="112" ry="23" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+            <text x="360" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#111c17">UC-06: Servis &amp; Sanitasi Data</text>
+
+            <ellipse cx="360" cy="382" rx="112" ry="23" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+            <text x="360" y="386" text-anchor="middle" font-size="11" font-weight="600" fill="#111c17">UC-07: Penyaluran Donasi &amp; BAST</text>
+
+            <ellipse cx="360" cy="467" rx="112" ry="23" fill="#ffffff" stroke="#0f3d28" stroke-width="1.8"/>
+            <text x="360" y="471" text-anchor="middle" font-size="11" font-weight="600" fill="#0f3d28">UC-09: Dasbor &amp; Laporan ESG</text>
+          </g>
+
+          <!-- Use Cases Right Col (cx=610) -->
+          <g>
+            <ellipse cx="615" cy="122" rx="108" ry="23" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+            <text x="615" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#9a3412">UC-03: Tinjau Prediksi HITL</text>
+
+            <ellipse cx="615" cy="196" rx="108" ry="23" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+            <text x="615" y="200" text-anchor="middle" font-size="11" font-weight="600" fill="#991b1b">UC-04: Karantina Baterai K3</text>
+
+            <ellipse cx="615" cy="467" rx="108" ry="23" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+            <text x="615" y="471" text-anchor="middle" font-size="11" font-weight="600" fill="#3730a3">UC-08: Manifest Daur Ulang</text>
+          </g>
+
+          <!-- Associations -->
+          <g stroke="#475569" stroke-width="1.4">
+            <line x1="184" y1="87" x2="248" y2="87"/>
+            <line x1="184" y1="95" x2="248" y2="152"/>
+            <line x1="184" y1="100" x2="248" y2="225"/>
+            <line x1="184" y1="217" x2="248" y2="306"/>
+            <line x1="184" y1="340" x2="512" y2="205"/>
+            <line x1="184" y1="355" x2="510" y2="462"/>
+            <line x1="184" y1="458" x2="255" y2="386"/>
+            <line x1="184" y1="467" x2="248" y2="467"/>
+            <line x1="472" y1="87" x2="776" y2="87"/>
+            <line x1="472" y1="382" x2="776" y2="359"/>
+            <line x1="723" y1="467" x2="776" y2="467"/>
+          </g>
+
+          <!-- Include / Extend dashed lines -->
+          <g stroke="#64748b" stroke-width="1.3" stroke-dasharray="5 3">
+            <line x1="508" y1="126" x2="468" y2="148" marker-end="url(#uc-arrow)"/>
+            <line x1="508" y1="192" x2="468" y2="165" marker-end="url(#uc-arrow)"/>
+            <line x1="360" y1="253" x2="360" y2="283" marker-end="url(#uc-arrow)"/>
+            <line x1="360" y1="359" x2="360" y2="329" marker-end="url(#uc-arrow)"/>
+          </g>
+          <text x="530" y="106" font-size="9.5" fill="#ea580c" font-weight="600">&lt;&lt;extend&gt;&gt; conf &lt; 0.85</text>
+          <text x="526" y="229" font-size="9.5" fill="#dc2626" font-weight="600">&lt;&lt;extend&gt;&gt; hazard</text>
+          <text x="368" y="272" font-size="9.5" fill="#475569" font-weight="600">&lt;&lt;include&gt;&gt;</text>
+          <text x="368" y="349" font-size="9.5" fill="#475569" font-weight="600">&lt;&lt;include&gt;&gt; wipe</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- DIAGRAM 3: ARCHITECTURE -->
+    <section class="section-card">
+      <h2>Diagram 3 (Komponen 6): Arsitektur Aplikasi &amp; Integrasi AI (Green &amp; Responsible AI)</h2>
+      <p class="section-sub">Memisahkan lapisan presentasi, tata kelola keamanan, layanan inti, inferensi AI ringan, dan basis data.</p>
+      <div class="svg-frame">
+        <svg viewBox="0 0 960 560" role="img" aria-label="Diagram Arsitektur SirkulAset">
+          <!-- Layer 1 -->
+          <rect x="20" y="16" width="920" height="82" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.6"/>
+          <text x="36" y="37" fill="#065f46" font-size="11.5" font-weight="700">1. Lapisan Presentasi (Multi-Role UI)</text>
+          <rect x="36" y="47" width="275" height="38" rx="6" fill="#ffffff" stroke="#a7f3d0"/><text x="173" y="70" text-anchor="middle" font-size="11" font-weight="600">Dasbor Web Eksekutif &amp; K3</text>
+          <rect x="340" y="47" width="280" height="38" rx="6" fill="#ffffff" stroke="#a7f3d0"/><text x="480" y="70" text-anchor="middle" font-size="11" font-weight="600">Mobile Triage PWA (QR &amp; Kamera)</text>
+          <rect x="648" y="47" width="275" height="38" rx="6" fill="#ffffff" stroke="#a7f3d0"/><text x="785" y="70" text-anchor="middle" font-size="11" font-weight="600">Portal Mitra Donasi &amp; Recycler</text>
+
+          <!-- Layer 2 -->
+          <rect x="20" y="114" width="920" height="72" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+          <text x="36" y="134" fill="#334155" font-size="11.5" font-weight="700">2. API Gateway, Keamanan &amp; Audit</text>
+          <rect x="36" y="143" width="275" height="32" rx="6" fill="#ffffff" stroke="#cbd5e1"/><text x="173" y="163" text-anchor="middle" font-size="10.5" font-weight="600">REST API Gateway (TLS 1.3 + Rate Limit)</text>
+          <rect x="340" y="143" width="280" height="32" rx="6" fill="#ffffff" stroke="#cbd5e1"/><text x="480" y="163" text-anchor="middle" font-size="10.5" font-weight="600">Auth SSO &amp; RBAC 6 Peran</text>
+          <rect x="648" y="143" width="275" height="32" rx="6" fill="#ffffff" stroke="#cbd5e1"/><text x="785" y="163" text-anchor="middle" font-size="10.5" font-weight="600">Immutable Audit Trail Service</text>
+
+          <!-- Layer 3 -->
+          <rect x="20" y="202" width="920" height="96" rx="10" fill="#ffffff" stroke="#0f3d28" stroke-width="1.6"/>
+          <text x="36" y="223" fill="#0f3d28" font-size="11.5" font-weight="700">3. Lapisan Layanan Aplikasi Inti</text>
+          <rect x="36" y="234" width="166" height="48" rx="6" fill="#f8faf9" stroke="#cbd5e1"/><text x="119" y="255" text-anchor="middle" font-size="10.5" font-weight="700">Asset Passport</text><text x="119" y="271" text-anchor="middle" font-size="9.5" fill="#52635a">Siklus Hidup &amp; QR</text>
+          <rect x="216" y="234" width="176" height="48" rx="6" fill="#f8faf9" stroke="#cbd5e1"/><text x="304" y="255" text-anchor="middle" font-size="10.5" font-weight="700">Circular Workflow</text><text x="304" y="271" text-anchor="middle" font-size="9.5" fill="#52635a">Reuse/Repair/Donate/Recycle</text>
+          <rect x="406" y="234" width="166" height="48" rx="6" fill="#fef2f2" stroke="#fecaca"/><text x="489" y="255" text-anchor="middle" font-size="10.5" font-weight="700" fill="#991b1b">K3 Safety Service</text><text x="489" y="271" text-anchor="middle" font-size="9.5" fill="#7f1d1d">Kunci Baterai &amp; Manifest</text>
+          <rect x="586" y="234" width="166" height="48" rx="6" fill="#ecfdf5" stroke="#a7f3d0"/><text x="669" y="255" text-anchor="middle" font-size="10.5" font-weight="700" fill="#065f46">Impact Engine</text><text x="669" y="271" text-anchor="middle" font-size="9.5" fill="#047857">CO2e &amp; CapEx Avoidance</text>
+          <rect x="766" y="234" width="157" height="48" rx="6" fill="#f8faf9" stroke="#cbd5e1"/><text x="844" y="255" text-anchor="middle" font-size="10.5" font-weight="700">ERP Sync Adapter</text><text x="844" y="271" text-anchor="middle" font-size="9.5" fill="#52635a">SIMAK &amp; Helpdesk</text>
+
+          <!-- Layer 4: AI -->
+          <rect x="20" y="314" width="920" height="132" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+          <text x="36" y="336" fill="#1e3a8a" font-size="11.5" font-weight="700">4. Lapisan AI Ringan (Green AI) &amp; Responsible Guardrail</text>
+          <rect x="36" y="348" width="190" height="80" rx="8" fill="#ffffff" stroke="#93c5fd"/><text x="131" y="372" text-anchor="middle" font-size="10.5" font-weight="700">Pra-Pemrosesan</text><text x="131" y="389" text-anchor="middle" font-size="9.5">Cek blur &amp; pencahayaan</text><text x="131" y="405" text-anchor="middle" font-size="9.5">Privacy blur layar/label</text>
+          <rect x="242" y="348" width="218" height="80" rx="8" fill="#ffffff" stroke="#93c5fd"/><text x="351" y="370" text-anchor="middle" font-size="10.5" font-weight="700">Vision &amp; Tabular Models</text><text x="351" y="387" text-anchor="middle" font-size="9.5">YOLOv8n + MobileNetV3 (INT8)</text><text x="351" y="403" text-anchor="middle" font-size="9.5">LightGBM + XAI (Grad-CAM)</text>
+          <rect x="476" y="348" width="224" height="80" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/><text x="588" y="370" text-anchor="middle" font-size="10.5" font-weight="700" fill="#991b1b">Dual Safety &amp; Conf Gate</text><text x="588" y="387" text-anchor="middle" font-size="9.5" fill="#7f1d1d">Hazard Baterai ≥ 0,35 → Lock K3</text><text x="588" y="403" text-anchor="middle" font-size="9.5" fill="#7f1d1d">Confidence &lt; 0,85 → HITL</text>
+          <rect x="716" y="348" width="207" height="80" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/><text x="819" y="370" text-anchor="middle" font-size="10.5" font-weight="700" fill="#9a3412">HITL &amp; Feedback Loop</text><text x="819" y="387" text-anchor="middle" font-size="9.5" fill="#7c2d12">Koreksi operator dicatat</text><text x="819" y="403" text-anchor="middle" font-size="9.5" fill="#7c2d12">untuk retraining berkala</text>
+
+          <!-- Layer 5: Data -->
+          <rect x="20" y="462" width="920" height="82" rx="10" fill="#f8faf9" stroke="#475569" stroke-width="1.6"/>
+          <text x="36" y="483" fill="#1e293b" font-size="11.5" font-weight="700">5. Lapisan Penyimpanan Data &amp; Model Registry</text>
+          <rect x="36" y="494" width="285" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/><text x="178" y="516" text-anchor="middle" font-size="10.5" font-weight="600">PostgreSQL (Aset, Inspeksi, Manifest, Audit)</text>
+          <rect x="338" y="494" width="285" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/><text x="480" y="516" text-anchor="middle" font-size="10.5" font-weight="600">Object Storage / MinIO (Foto, BAST, Sertifikat)</text>
+          <rect x="640" y="494" width="283" height="36" rx="6" fill="#ffffff" stroke="#cbd5e1"/><text x="781" y="516" text-anchor="middle" font-size="10.5" font-weight="600">Model Registry &amp; Drift Monitor (MLflow)</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- DIAGRAM 4: ERD -->
+    <section class="section-card">
+      <h2>Diagram 4 (Komponen 7): Entity-Relationship Diagram (ERD)</h2>
+      <p class="section-sub">Rancangan basis data relasional 12 entitas dengan kunci integritas untuk keselamatan baterai, HITL, donasi, dan manifest B3.</p>
+      <div class="svg-frame">
+        <svg viewBox="0 0 980 610" role="img" aria-label="ERD SirkulAset">
+          <!-- Row 1 -->
+          <rect x="20" y="20" width="210" height="122" rx="8" fill="#ffffff" stroke="#0f3d28" stroke-width="1.6"/>
+          <rect x="20" y="20" width="210" height="26" rx="8" fill="#0f3d28"/>
+          <text x="125" y="37" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">USERS</text>
+          <text x="30" y="64" font-size="10">PK user_id (uuid)</text>
+          <text x="30" y="80" font-size="10">nama_lengkap, email</text>
+          <text x="30" y="96" font-size="10">role (RBAC), unit_kerja</text>
+          <text x="30" y="112" font-size="10">is_active (boolean)</text>
+
+          <rect x="360" y="20" width="250" height="145" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.8"/>
+          <rect x="360" y="20" width="250" height="26" rx="8" fill="#059669"/>
+          <text x="485" y="37" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">ASSETS</text>
+          <text x="370" y="63" font-size="10">PK asset_id (uuid), UK qr_tag</text>
+          <text x="370" y="79" font-size="10">serial_number, kategori, merek_model</text>
+          <text x="370" y="95" font-size="10">tahun_perolehan, harga_perolehan_idr</text>
+          <text x="370" y="111" font-size="10">berat_kg, unit_pemilik</text>
+          <text x="370" y="127" font-size="10">status_siklus (reuse/repair/donate/recycle/hazmat)</text>
+
+          <rect x="720" y="20" width="240" height="122" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+          <rect x="720" y="20" width="240" height="26" rx="8" fill="#2563eb"/>
+          <text x="840" y="37" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">DONATION_RECIPIENTS</text>
+          <text x="730" y="64" font-size="10">PK recipient_id (uuid)</text>
+          <text x="730" y="80" font-size="10">nama_lembaga, jenis_lembaga</text>
+          <text x="730" y="96" font-size="10">alamat, kontak</text>
+          <text x="730" y="112" font-size="10">status_verifikasi</text>
+
+          <!-- Row 2 -->
+          <rect x="20" y="208" width="240" height="162" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.6"/>
+          <rect x="20" y="208" width="240" height="26" rx="8" fill="#ea580c"/>
+          <text x="140" y="225" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">AI_INSPECTIONS</text>
+          <text x="30" y="252" font-size="10">PK inspection_id, FK asset_id, operator_id</text>
+          <text x="30" y="268" font-size="10">predicted_condition, confidence_score</text>
+          <text x="30" y="284" font-size="10">battery_hazard_score, hazard_lock_triggered</text>
+          <text x="30" y="300" font-size="10">hitl_required, hitl_status, FK verified_by</text>
+          <text x="30" y="316" font-size="10">final_visual_label, correction_reason</text>
+          <text x="30" y="332" font-size="10">disclaimer_acknowledged (boolean)</text>
+
+          <rect x="360" y="208" width="250" height="142" rx="8" fill="#ffffff" stroke="#0f3d28" stroke-width="1.6"/>
+          <rect x="360" y="208" width="250" height="26" rx="8" fill="#0f3d28"/>
+          <text x="485" y="225" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">CIRCULAR_ROUTING_EVENTS</text>
+          <text x="370" y="252" font-size="10">PK event_id, FK asset_id, inspection_id</text>
+          <text x="370" y="268" font-size="10">recommended_pathway, final_pathway</text>
+          <text x="370" y="284" font-size="10">FK approved_by, workflow_status</text>
+          <text x="370" y="300" font-size="10">notes, created_at</text>
+
+          <rect x="720" y="208" width="240" height="132" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+          <rect x="720" y="208" width="240" height="26" rx="8" fill="#2563eb"/>
+          <text x="840" y="225" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">DONATION_RECORDS</text>
+          <text x="730" y="252" font-size="10">PK donation_id</text>
+          <text x="730" y="268" font-size="10">FK asset_id, FK recipient_id</text>
+          <text x="730" y="284" font-size="10">data_wipe_cert_no (wajib)</text>
+          <text x="730" y="300" font-size="10">bast_doc_url, tanggal_serah</text>
+
+          <!-- Row 3 -->
+          <rect x="20" y="424" width="230" height="145" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+          <rect x="20" y="424" width="230" height="26" rx="8" fill="#d97706"/>
+          <text x="135" y="441" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">REPAIR_TICKETS</text>
+          <text x="30" y="468" font-size="10">PK ticket_id, FK asset_id, technician_id</text>
+          <text x="30" y="484" font-size="10">temuan_internal, tindakan_perbaikan</text>
+          <text x="30" y="500" font-size="10">biaya_perbaikan_idr, data_wipe_cert_no</text>
+          <text x="30" y="516" font-size="10">lolos_uji_fungsi, status_ticket</text>
+
+          <rect x="280" y="424" width="215" height="145" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1.6"/>
+          <rect x="280" y="424" width="215" height="26" rx="8" fill="#4f46e5"/>
+          <text x="387" y="441" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">EWASTE_MANIFESTS</text>
+          <text x="290" y="468" font-size="10">PK manifest_id, FK recycler_id</text>
+          <text x="290" y="484" font-size="10">FK officer_k3_id, total_berat_kg</text>
+          <text x="290" y="500" font-size="10">contains_hazmat_battery (bool)</text>
+          <text x="290" y="516" font-size="10">manifest_doc_url, recycling_cert_url</text>
+          <text x="290" y="532" font-size="10">status_manifest (terjadwal/selesai)</text>
+
+          <rect x="520" y="424" width="205" height="145" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1.6"/>
+          <rect x="520" y="424" width="205" height="26" rx="8" fill="#4f46e5"/>
+          <text x="622" y="441" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">LICENSED_RECYCLERS</text>
+          <text x="530" y="468" font-size="10">PK recycler_id</text>
+          <text x="530" y="484" font-size="10">nama_perusahaan</text>
+          <text x="530" y="500" font-size="10">nomor_izin_b3</text>
+          <text x="530" y="516" font-size="10">masa_berlaku_izin</text>
+
+          <rect x="750" y="424" width="210" height="145" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+          <rect x="750" y="424" width="210" height="26" rx="8" fill="#059669"/>
+          <text x="855" y="441" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700">METRICS &amp; AUDIT_LOGS</text>
+          <text x="760" y="468" font-size="10">• SUSTAINABILITY_METRICS:</text>
+          <text x="760" y="484" font-size="9.5">  waste_diverted_kg, co2e_avoided_kg,</text>
+          <text x="760" y="499" font-size="9.5">  cost_avoidance_idr, recovery_idr</text>
+          <text x="760" y="519" font-size="10">• MANIFEST_ITEMS (bridge N:M)</text>
+          <text x="760" y="537" font-size="10">• AUDIT_LOGS (immutable trail)</text>
+
+          <!-- Relation Lines -->
+          <g stroke="#64748b" stroke-width="1.4" fill="none">
+            <path d="M 125 142 L 125 208"/>
+            <path d="M 360 110 L 260 220"/>
+            <path d="M 485 165 L 485 208"/>
+            <path d="M 260 278 L 360 278"/>
+            <path d="M 610 110 L 720 245"/>
+            <path d="M 840 142 L 840 208"/>
+            <path d="M 375 165 L 250 450"/>
+            <path d="M 495 496 L 520 496"/>
+            <path d="M 610 145 L 750 450"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Catatan Wajib Keselamatan -->
+    <section class="section-card">
+      <h2>Kepatuhan terhadap Catatan Penting: Keselamatan &amp; Tanggung Jawab AI</h2>
+      <div class="safety-banner">
+        <ul style="margin:0; padding-left:20px;">
+          <li><strong>Batas Computer Vision:</strong> Memberikan identifikasi awal berdasarkan tampilan visual eksternal, <em>bukan</em> sertifikasi keamanan kelistrikan atau kondisi internal perangkat.</li>
+          <li><strong>Protokol Baterai Berisiko:</strong> Baterai yang rusak, menggembung, bocor, atau panas <strong>dilarang ditangani dengan membongkar secara mandiri</strong>; sistem mengunci fitur servis dan mengarahkan isolasi K3 ke pihak kompeten.</li>
+          <li><strong>Human-in-the-Loop (HITL):</strong> Prediksi dengan tingkat keyakinan rendah (&lt; 0,85) otomatis masuk antrean verifikasi operator; keputusan penting tidak sepenuhnya otomatis.</li>
+          <li><strong>Kepatuhan Pengolahan E-Waste:</strong> Pengumpulan, penyimpanan, pengangkutan, dan pengolahan mengikuti regulasi B3/sampah spesifik dan hanya melibatkan pengolah berizin aktif.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
